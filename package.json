@@ -1,0 +1,43 @@
+{
+  "name": "@pocket-tools/backend-benchmarking",
+  "version": "1.0.0",
+  "description": "Stores utility methods for benchmarking performance of APIs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "build": "rm -rf dist && tsc",
+    "lint-check": "eslint --fix-dry-run \"src/**/*.ts\"",
+    "lint-fix": "eslint --fix \"src/**/*.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pocket/backend-benchmarking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pocket/backend-benchmarking/issues"
+  },
+  "homepage": "https://github.com/Pocket/backend-benchmarking#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  },
+  "publishConfig": {
+    "cache": "~/.npm",
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  }
+}
