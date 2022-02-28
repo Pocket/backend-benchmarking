@@ -1,6 +1,6 @@
 {
   "name": "@pocket-tools/backend-benchmarking",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Stores utility methods for benchmarking performance of APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.js",

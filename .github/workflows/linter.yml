@@ -63,3 +63,4 @@ jobs:
           VALIDATE_MD: true
           VALIDATE_TYPESCRIPT_ES: true
           VALIDATE_YAML: true
+          LINTER_RULES_PATH: /
