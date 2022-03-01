@@ -2,3 +2,4 @@
 // anything we want consumable (module, type, class, etc) should be exported here
 
 export * from './timeIt';
+export * as seeds from './seeds';
