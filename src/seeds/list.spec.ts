@@ -5,11 +5,15 @@ describe('mockList', () => {
     const mockListGenerator = mockList('abc123', { count: 10, batchSize: 2 });
     let batch = mockListGenerator.next();
     const results = [];
+    const ids = [];
     while (!batch.done) {
       // Keep track of batch size
       results.push(batch.value['list'].length);
+      ids.push(...batch.value['list'].map((l) => l.item_id));
       batch = mockListGenerator.next();
     }
+    // No dupes, proper indexing
+    expect(ids).toStrictEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
     expect(results).toStrictEqual([2, 2, 2, 2, 2]);
   });
   it('should produce data when total count is not divisible by batch size', () => {

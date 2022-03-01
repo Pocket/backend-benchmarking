@@ -129,7 +129,7 @@ export function* mockList(
       is_article: isArticle ? 1 : 0,
     };
     index += 1;
-    if (index && index % batchSize === 0) {
+    if (index % batchSize === 0) {
       yield { list: listData, items_extended: extendedData };
     }
   }
